@@ -18,9 +18,11 @@ feature_name = featurebase;
 param.outstem = outstem;
 %确定输入特征
 %sc= readmatrix('data/scfp_atlas400_753.txt');
-fc = readmatrix('data/rsfc_Yeo400_753_GSR.txt');
-%hc= horzcat(fc,sc);
-features=fc;
+fc2 = readmatrix('data/rsfc_Yeo400_753_GSR.txt');
+%fc1 = readmatrix('data/rsfc_atlas400_753_4.txt');
+%hc1= horzcat(fc1,sc);
+%hc2= horzcat(fc2,sc);
+features=fc2;
 %回归模型设置
 lambda_set = [ 0 0.00001 0.0001 0.001 0.004 0.007 0.01 0.04 0.07 0.1 0.4 0.7 1 1.5 2 2.5 3 3.5 4 5 10 15 20];
 param.with_bias = 1;
@@ -31,7 +33,7 @@ param.lambda_set = lambda_set;
 param.threshold_set = [];
 param.cov_X = [];
 %设置精度指标
-param.metric = 'COD';
+param.metric = 'corr';%corr,COD
 for i =1:30
     param.outdir = fullfile(outdir, outstem,num2str(i), 'results');
     %划分训练集

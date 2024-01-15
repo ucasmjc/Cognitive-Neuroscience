@@ -2,7 +2,7 @@ addpath(genpath('utilities\utilities\'))
 %设置路径和待计算的实验名
 results_dir='logs/';
 feature='fc2_corr';
-input_dir = 'daa/rsfc_Yeo400_753_GSR.txt';
+input_dir = 'data/rsfc_Yeo400_753_GSR.txt';
 %haufe变换
 CBIG_MMP_HCP_Haufe(input_dir, results_dir, feature)
 mat=load(fullfile("logs\interpretation",feature, 'cov_mat_mean.mat'));
