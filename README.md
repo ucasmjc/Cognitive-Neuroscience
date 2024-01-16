@@ -3,6 +3,7 @@
 ## 准备
 - 将老师提供的数据集解压并放在data文件夹下
 - 创建cor.txt，每行一个协变量的名字，如Gender，放在data文件夹下
+- prediction_variables.txt仅保留前13行认知变量
 ## 实验复现
 1. 首先是KRR模型的实验，打开krr.m，首先设置实验名
 ~~~matlab
