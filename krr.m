@@ -18,7 +18,7 @@ feature_name = featurebase;
 param.outstem = outstem;
 %确定输入特征
 %sc= readmatrix('data/scfp_atlas400_753.txt');
-fc2 = readmatrix('data/rsfc_Yeo400_753_GSR.txt');
+
 %fc1 = readmatrix('data/rsfc_atlas400_753_4.txt');
 %hc1= horzcat(fc1,sc);
 %hc2= horzcat(fc2,sc);
